@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\helpers\VarDumper;
 
 class SiteController extends Controller
 {
@@ -62,7 +63,9 @@ class SiteController extends Controller
     public function actionIndex()
     {
 
-        // var_dump(Yii::$app->security->generatePasswordHash(123456)); die;
+        // VarDumper::dump(Yii::$app->security->generatePasswordHash(1), 10, true);
+        // VarDumper::dump(Yii::$app->security->generatePasswordHash(2), 10, true);
+        //  die;
         return $this->render('index');
     }
 

@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?= ListView::widget([
         'dataProvider' => $dataProvider,
-        'layout' => "<div class='row row-cols-sm-1 row-cols-md-3 carts-style'>{items}</div>",
+        'layout' => "<div class='row row-cols-sm-1 row-cols-md-3 carts-style'>{items}</div>\n{pager}",
         'itemOptions' => ['class' => 'item'],
         'itemView' => 'item',
         'pager' => ['class' => LinkPager::class]
